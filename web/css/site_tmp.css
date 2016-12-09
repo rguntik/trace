@@ -1,0 +1,56 @@
+#trace-body .btn-group table, #trace-body .btn-group {
+    width: 100%;
+}
+#trace-body .title.btn {
+    width: 100%;
+}
+#trace-body button {
+    text-align: left;
+}
+#trace-body ul {
+    padding: 0 0 0 34px;
+}
+#trace-body > ul {
+   padding: 0;
+}
+.open-list {
+    width: 34px;
+    border-right: 1px #ccc solid;
+}
+.open-list button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+#trace-body li {
+    display: block;
+    margin: 3px 0;
+    position: relative;
+}
+#trace-body * {
+    /*margin: 0;*/
+    /*padding: 0;*/
+}
+#trace-body .list.close-item .opener
+{
+    background-image: url("../img/expand.png");
+}
+#trace-body .function-item.open > ul
+{
+    display: block;
+}
+#trace-body .function-item > ul
+{
+    display: none;
+}
+.open-active .caret {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: none;
+    border-left: 4px dashed;
+    margin: 0 2px;
+}
+#trace-body td
+{
+    vertical-align: top;
+}

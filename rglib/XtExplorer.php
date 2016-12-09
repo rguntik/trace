@@ -5,7 +5,7 @@ namespace app\rglib;
 class XtExplorer
 {
 //    const MAX_LINE = 10000;
-    const MAX_LINE = 10;
+    const MAX_LINE = 100;
     const MAX_PARAM_LENGTH = 80;
 
     public $data = null;
