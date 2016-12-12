@@ -15,7 +15,7 @@ $children = count($item['children'] > 0) && !empty($item['children']);
                 <?= $item['functionName']; ?>
                 <div class="function-description">
                    <?
-                   dump($item);
+//                   dump($item);
                    ?>
                     <? if (is_array($fieldsToShow)) : ?>
                         <table>
@@ -40,7 +40,7 @@ $children = count($item['children'] > 0) && !empty($item['children']);
     <? if ($children) : ?>
         <ul>
             <? foreach ($item['children'] as $val) : ?>
-                <?= $this->render('item', ['item' => $val]); ?>
+                <?= $this->render('item', ['item' => $val, 'fieldsToShow' =>$fieldsToShow]); ?>
             <? endforeach; ?>
         </ul>
     <? endif; ?>
