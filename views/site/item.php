@@ -11,10 +11,28 @@ $children = count($item['children'] > 0) && !empty($item['children']);
             </td>
         <? endif; ?>
         <td>
-            <div type="button" class="title btn btn-default" <? if ($children) : ?>style="border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none;" <? endif; ?>>
+            <div class="title btn btn-default" <? if ($children) : ?>style="border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none;" <? endif; ?>>
                 <?= $item['functionName']; ?>
                 <div class="function-description">
-                   <? dump($item); ?>
+                   <?
+                   dump($item);
+                   ?>
+                    <? if (is_array($fieldsToShow)) : ?>
+                        <table>
+                            <? foreach ($fieldsToShow as $val): ?>
+                                <? if (array_key_exists($val, $item)) : ?>
+                                    <tr>
+                                        <td>
+                                            <?= $val; ?>
+                                        </td>
+                                        <td>
+                                            <?= $item[$val]; ?>
+                                        </td>
+                                    </tr>
+                                <? endif; ?>
+                            <? endforeach; ?>
+                        </table>
+                    <? endif; ?>
                 </div>
             </div>
         </td>

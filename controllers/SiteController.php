@@ -14,13 +14,26 @@ class SiteController extends Controller
         $files = FileHelper::findFiles(ini_get('xdebug.trace_output_dir'), ['only'=>['*t.xt']]);
         $traceFile = reset($files);
         $traceExplorer = new XtExplorer($traceFile);
+        $fieldsToShow = [
+            'level',
+            'functionId',
+            'entry',
+            'timeIndex',
+            'memory',
+            'functionName',
+            'functionType',
+            'includeFile',
+            'filePath',
+            'lineNumber',
+            'paramCount',
+            'params',
+            'children',
+            'parentId',
+        ];
 
-//        dump($traceExplorer->data);
-//        var_dump($traceExplorer);
-//        dump($traceExplorer);
-//        exit;
         return $this->render('index', [
             'traceData' => $traceExplorer->data[0],
+            'fieldsToShow' => $fieldsToShow
         ]);
     }
 

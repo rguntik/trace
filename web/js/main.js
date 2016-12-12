@@ -1,7 +1,5 @@
 $(document).ready(function () {
     $('div.title').on('click', function (e) {
-        console.log(e);
-        console.log($(e.target));
         if ($(e.target).hasClass('title')) {
             $(this).toggleClass('show-desc');
         }

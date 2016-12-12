@@ -135,6 +135,15 @@ a.desc:after {
 #trace-body button{
     text-align: left;
 }
+#trace-body .btn {
+    -moz-user-select: inherit;
+    -webkit-user-select: inherit;
+    -o-user-select: inherit;
+}
+#trace-body td
+{
+    vertical-align: top;
+}
 #trace-body td > button.title
 {
     width: 100%;

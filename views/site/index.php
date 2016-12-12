@@ -15,7 +15,7 @@ $this->title = 'Trace main page';
         </div>
         <ul>
 <!--            --><?// if ($this->beginCache('tt1', ['duration' => 10])) : ?>
-                <?= $this->render('item', ['item' => $traceData]); ?>
+                <?= $this->render('item', ['item' => $traceData, 'fieldsToShow' =>$fieldsToShow]); ?>
 <!--                --><?// $this->endCache();  ?>
 <!--            --><?// endif; ?>
         </ul>
